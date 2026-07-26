@@ -1,0 +1,11 @@
+Category,Model,Target,AIC,RMSE,MAE,ARCH Effects in Resid.,Notes
+Classical,Simple Exp. Smoothing,Price,-,TBD,TBD,N/A,Naive baseline; no trend
+Classical,Holt's Double Smoothing,Price,-,TBD,TBD,N/A,Captures trend well
+Classical,Holt-Winters,Price,-,TBD,TBD,N/A,Weak seasonality in index
+Classical,"ARIMA(3,0,4)",Log-Return,10832.5,TBD,TBD,YES,Best classical mean model
+GARCH family,ARCH(q),Variance,TBD,TBD,TBD,N/A,ARCH order q selected by AIC
+GARCH family,"GARCH(1,1)",Variance,9093.2,TBD,TBD,N/A,Standard workhorse
+GARCH family,"EGARCH(1,1)",Variance,TBD,TBD,TBD,N/A,Captures leverage effect
+GARCH family,"GJR-GARCH(1,1,1)",Variance,TBD,TBD,TBD,N/A,★ Best by AIC/BIC typically
+Regime,HMM (3 states),Regime,-,N/A,N/A,N/A,Maps states to real events
+Hybrid,"ARIMA(3,0,4) + GJR-GARCH",Mean + Var,TBD,TBD,TBD,N/A,★ Headline model
